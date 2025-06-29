@@ -1,5 +1,7 @@
-# Jellyfin for Samsung Smart TV with Orsay OS
-This is a version of Jellyfin for Samsung Smart TV produced before 2014.
+# Jellyfin for Samsung Smart TV with Orsay OS - mod
+This is a fork of the original version of Jellyfin for Samsung Smart TV produced before 2014 without server version checking which in the original version bricks the app on newer server versions.
+The modded version had a "mod" suffix at the end of the .zip filename. The original version is also added, without the "mod" suffix.
+
 The models concerned are using Orsay OS, a legacy operating system that is no more supported.
 Apps and OS updates are no more available but the system is still customizable using the developer account.
 
@@ -33,6 +35,7 @@ For windows:
 - Make sure files are available, open a web browser and type: http://localhost/widgetlist.xml
 - Once everything is in place open a powershell, type ipconfig
 - Write down the local IP of your machine (192.168.xxx.xxx) as you will need it during the install procedure as the "Server's IP address"
+- Make sure your machine is reachable from other local network devices by typing the machines IP address /widgetlist.xml (example: http://192.168.xxx.xxx/widgetlist.xml), if the site is unreachable try disabling the firewall on the IIS host computer
 
 ------------------
 Post-Install notes
@@ -50,7 +53,7 @@ Once the install is successful, you should logout from the developer account, an
 - On the Samsung device load up the Smart Hub and press red to login
 - Login with the details "develop", password "000000"
 - Once logged in, press the blue button and there should be a developer menu.
-- In there select "Setting Server IP" and it will ask for an IP address. Enter either 110.150.77.83 or 80.32.109.216
+- In there select "Setting Server IP" and it will ask for an IP address. Enter the IP of the IIS enabled computer, which you have previously checked with IPConfig.
 - Once that's done select "User Application Synchronization" and hopefully it will connect and download the app to the TV.
 
 ---------------------
@@ -77,7 +80,7 @@ To install/update the app
 - Check the box to "Agree" to the "Terms of Service Agreement"
 - Select "OK"
 - Select "Setting Server IP"
-- Enter the IP Address 173.230.139.54
+- Enter the IP of the IIS enabled computer, which you have previously checked with IPConfig
 - Select "User Application Synchronisation" - this will download the app
 - Once the app has downloaded it will appear on the SmartHub screen
 - Select the App
@@ -97,7 +100,7 @@ To install/update the app
 - Select "More Apps" (at the bottom of the screen)
 - Select "Options" at the top right
 - Select "IP Setting"
-- Enter the IP address 173.230.139.54
+- Enter the IP of the IIS enabled computer, which you have previously checked with IPConfig
 - Exit and then select "Start App Sync" from the Options menu - this will download the app
 - Once the app has downloaded it will appear on the "More Apps" screen
 - Select the App
@@ -112,7 +115,7 @@ Supported models: All H and HU (4K) series models plus J4300, J5200, J5300, J620
 - You can logon as develop (user "develop", password "000000" or blank for some models) by clicking the menu button and than select Smart Hub and in there Samsung Account menu on your remote.
 - After you logged on as develop you can press the smart hub button on your remote.
 - Go to my app's list and on one of the installed apps hold the enter button down for a few seconds.
-- Another window will pop up giving you the option to add the IP address. Enter 173.230.139.54.
+- Another window will pop up giving you the option to add the IP address. Enter the IP of the IIS enabled computer, which you have previously checked with IPConfig.
 - Afterwards hold the enter button down to go in the options again and choose "Start User app sync".
 - There will pop up a new window which says "user apps sync is requested"
 - After a few seconds the app will be installed on your TV.
